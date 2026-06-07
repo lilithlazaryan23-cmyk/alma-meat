@@ -1,0 +1,9 @@
+#!/bin/bash
+
+PROJECT_PATH="$(dirname $(realpath $0))"
+
+cd "${PROJECT_PATH}/docker"
+
+PREFIX="docker compose exec -it -u alma alma-app"
+
+$PREFIX $@

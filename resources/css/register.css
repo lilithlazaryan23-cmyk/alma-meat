@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Times New Roman;
+}
+
+body {
+    background-color: #352C2C;
+    overflow: hidden;
+}
+
+#return_main {
+    position: fixed;
+    top: 20px;
+    left: 22px;
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    border-radius: 30px;
+    background: rgba(217, 217, 217, 0.65);
+    color: #881e1e;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+#return_main i {
+    font-size: 16px;
+    transform: scaleX(-1);
+}
+
+#return_main:hover {
+    background: #881e1e;
+    color: white;
+    transform: translateX(-3px);
+    box-shadow: 0 6px 18px rgba(136, 30, 30, 0.45);
+}
+
+.registration_blok.active-signup #login_text {
+    transform: translateX(100px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.registration_blok.active-signup #signup_text {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 3;
+    pointer-events: all;
+}
+
+.registration_blok.active-signup #log_img {
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.registration_blok.active-signup #sig_img {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#bod_img {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#login_text,
+#signup_text {
+    width: 63%;
+    height: 630px;
+    border-radius: 37px;
+    background-color: #d9d9d9db;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 8%;
+    left: 18%;
+    transition: all 0.6s ease-in-out;
+}
+
+#login_text {
+    opacity: 1;
+    z-index: 2;
+}
+
+#signup_text {
+    left: 420px;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    margin-left: -9.5%;
+    transform: translateX(-100px);
+    transition: all 0.6s ease-in-out;
+}
+
+#log_img,
+#sig_img {
+    transition: all 0.6s ease-in-out;
+    position: absolute;
+    width: 420px;
+    height: 630px;
+}
+
+#log_img {
+    right: 0;
+    opacity: 1;
+}
+
+#sig_img {
+    left: 0;
+    transform: translateX(100px);
+    transition: all 0.6s ease-in-out;
+}
+
+#log_img {
+    height: 630px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom-right-radius: 37px;
+    border-top-right-radius: 37px;
+}
+
+#sig_img {
+    width: 420px;
+    height: 630px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    border-top-left-radius: 37px;
+    border-bottom-left-radius: 37px;
+}
+
+#logo_img,
+#siglogo_img {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 18px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#logo_img {
+    left: 3%;
+}
+
+#siglogo_img {
+    right: 3%;
+}
+
+p {
+    color: rgb(136, 30, 30);
+    text-align: center;
+}
+
+.p1,
+.p11 {
+    font-size: 28px;
+    position: relative;
+    font-weight: bold;
+    line-height: 58px;
+}
+
+.p2 {
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: capitalize;
+}
+
+.top {
+    margin-left: -40%;
+    margin-top: -10%;
+    text-align: center;
+}
+
+.together,.together2 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.together2{
+    margin-left: 40%;
+    margin-top: 10%;
+    text-align: center;
+}
+.p11 {
+    font-size: 28px;
+    margin-top: -48%;
+    font-weight: bold;
+    line-height: 58px;
+}
+
+.p22 {
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: capitalize;
+}
+
+.forms {
+    margin-top: 50px;
+}
+
+.reg_log_sig,
+.reg_sig_log {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#login_form,
+#signup_form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: 8%;
+}
+
+#signup_form {
+    margin-left: 52%;
+    margin-top: -70px;
+}
+
+.gender_box {
+    display: flex;
+    gap: 20px;
+    color: #61141499;
+    font-weight: bold;
+    font-size: 15px;
+    padding-left: 4px;
+}
+
+.gender_box label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.gender_box input[type="radio"] {
+    width: auto;
+    height: auto;
+    accent-color: #881e1e;
+}
+
+#login_text a,
+#signup_text a {
+    color: #61141499;
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    margin-top: 55%;
+    margin-left: -76%;
+}
+
+#signup_text a {
+    margin-top: 55%;
+    margin-left: 60%;
+}
+
+input {
+    width: 350px;
+    height: 38px;
+    border: none;
+    border-radius: 10px;
+    padding: 0 15px;
+    font-size: 15px;
+    background-color: #881e1e40;
+    color: #61141499;
+}
+
+input::placeholder {
+    color: #881e1e55;
+}
+
+button {
+    width: 350px;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #7e1d1d, #a22a2a);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(142, 48, 48, 0.3);
+}
+
+@media (max-width: 1200px) {
+    .registration_blok {
+        width: 900px;
+        left: 200px;
+    }
+
+    #login_text,
+    #signup_text {
+        width: 550px;
+    }
+
+    #log_img,
+    #sig_img {
+        width: 350px;
+    }
+}
+
+@media (max-width: 980px) {
+    .registration_blok {
+        width: 800px;
+        left: 150px;
+    }
+
+    #login_text,
+    #signup_text {
+        width: 480px;
+    }
+
+    #log_img,
+    #sig_img {
+        width: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .registration_blok {
+        width: 90%;
+        left: 5%;
+        height: 550px;
+    }
+
+    #login_text,
+    #signup_text {
+        width: 100%;
+        height: 550px;
+    }
+
+    #log_img,
+    #sig_img {
+        display: none;
+    }
+
+    input {
+        width: 250px;
+    }
+
+    button {
+        width: 250px;
+    }
+}

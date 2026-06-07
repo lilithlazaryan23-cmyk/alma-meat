@@ -1,0 +1,58 @@
+name: ${NAMESPACE}
+services:
+  alma-app:
+    container_name: ${NAMESPACE}-app
+    restart: unless-stopped
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      args:
+        NAMESPACE: ${NAMESPACE}
+        USER_ID: ${USER_ID}
+        GROUP_ID: ${GROUP_ID}
+        PHP_VERSION: ${PHP_VERSION}
+        NODE_VERSION: ${NODE_VERSION}
+        NPM_VERSION: ${NPM_VERSION}
+    depends_on:
+      - alma-db
+    ports:
+      - 127.0.0.1:${APP_PORT}:80
+    networks:
+      - alma-network
+    volumes:
+      - ../:/var/www/${NAMESPACE}
+  alma-db:
+    container_name: ${NAMESPACE}-db
+    restart: unless-stopped
+    image: mysql:${MYSQL_VERSION}
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - 127.0.0.1:${MYSQL_PORT}:3306
+    networks:
+      - alma-network
+    volumes:
+      - alma-db:/var/lib/mysql
+  alma-phpmyadmin:
+    container_name: ${NAMESPACE}-phpmyadmin
+    restart: unless-stopped
+    image: phpmyadmin:${PMA_VERSION}
+    environment:
+      PMA_HOST: alma-db
+    depends_on:
+      - alma-db
+    ports:
+      - 127.0.0.1:${PMA_PORT}:80
+    networks:
+      - alma-network
+networks:
+  alma-network:
+    driver: bridge
+    name: ${NAMESPACE}-network
+volumes:
+  alma-db:
+    driver: local
+    name: ${NAMESPACE}-db

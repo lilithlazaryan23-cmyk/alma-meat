@@ -1,0 +1,44 @@
+#!/bin/bash
+
+LOCAL_PATH="$(dirname $(realpath $0))"
+
+source "${LOCAL_PATH}/.env"
+
+cd "${LOCAL_PATH}/../"
+
+cp .env.example .env
+
+sed -i \
+    -e "s|^APP_URL=.*|APP_URL=http://localhost:${APP_PORT}|" \
+    -e "s|^DB_CONNECTION=.*|DB_CONNECTION=mysql|" \
+    -e "s|^DB_HOST=.*|DB_HOST=alma-db|" \
+    -e "s|^DB_PORT=.*|DB_PORT=3306|" \
+    -e "s|^DB_DATABASE=.*|DB_DATABASE=${MYSQL_DATABASE}|" \
+    -e "s|^DB_USERNAME=.*|DB_USERNAME=${MYSQL_USER}|" \
+    -e "s|^DB_PASSWORD=.*|DB_PASSWORD=${MYSQL_PASSWORD}|" \
+    .env
+
+cd "${LOCAL_PATH}"
+
+PREFIX="docker compose exec -u alma alma-app"
+
+$PREFIX composer install
+
+$PREFIX php artisan key:generate
+
+TRIES=0
+until $PREFIX php artisan tinker --execute="DB::connection()->getPdo();" > /dev/null 2>&1 || [ ${TRIES} -ge 30 ]; do
+    TRIES=$((TRIES + 1))
+    echo "Waiting for database (${TRIES}/30)..."
+    sleep 2
+done
+
+$PREFIX php artisan migrate
+
+$PREFIX php artisan db:seed
+
+$PREFIX php artisan storage:link --force
+
+$PREFIX npm install
+
+$PREFIX npm run build
