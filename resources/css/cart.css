@@ -26,7 +26,8 @@ body {
     height: 85px;
     border-radius: 50%;
     margin-left: 6%;
-    margin-top: 7px;
+    margin-top: 0;
+    display: block;
 }
 
 .texts {
@@ -207,8 +208,9 @@ header ul {
     width: 62%;
     height: 0.5px;
     background-color: aliceblue;
-    margin-left: 20%;
-    margin-top: -1.54%;
+    position: absolute;
+    left: 20%;
+    bottom: 25px;
 }
 
 #mer_masin_open {
@@ -775,4 +777,43 @@ header ul {
 .footer-logo-img {
     width: 240px;
     filter: brightness(0) invert(1);
+}
+
+/* Toast notification (shown by showNotification() in cart.js) */
+.notification {
+    position: fixed;
+    top: 118px;
+    right: 24px;
+    z-index: 100000;
+    max-width: 360px;
+    padding: 16px 22px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #235572, #801e1e);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    animation: notif-in 0.35s ease, notif-out 0.4s ease 2.2s forwards;
+}
+
+@keyframes notif-in {
+    from { opacity: 0; transform: translateX(40px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes notif-out {
+    from { opacity: 1; transform: translateX(0); }
+    to   { opacity: 0; transform: translateX(40px); }
+}
+
+@media (max-width: 600px) {
+    .notification {
+        top: auto;
+        bottom: 24px;
+        left: 16px;
+        right: 16px;
+        max-width: none;
+    }
 }

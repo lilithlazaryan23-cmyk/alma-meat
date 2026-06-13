@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -nE \"containerr|overflow|height: [0-9]{3,}px\" /home/user/Desktop/Projects/alma-meat/resources/css/luma.css)",
+      "Bash(grep -nE \"containerr|container|overflow|height: [0-9]{3,}px\" /home/user/Desktop/Projects/alma-meat/resources/css/marila.css)",
+      "Bash(grep -nA8 -E \"\\\\.div2_uper|\\\\.line_into|\\\\.under_opaci\" resources/css/luma.css)",
+      "Bash(grep -nA10 -E \"\\\\.container_lerg\\\\b\" resources/css/marila.css)",
+      "Bash(grep -nA6 -E \"\\\\.in_img|\\\\.dicrat_img|\\\\.body_img|\\\\.paralex_selector|\\\\.quality_standards\" resources/css/marila.css)",
+      "Bash(grep -iE \"@media|height: *[0-9]{3,}\")",
+      "Bash(grep -nA14 -E \"\\\\.quality_standards \\\\{\" resources/css/marila.css)",
+      "Bash(grep -nA6 -E \"\\\\.standards_inner|\\\\.card_line\" resources/css/marila.css)",
+      "Bash(grep -nA10 -E \"\\\\.main_container \\\\{\" resources/css/marila.css)",
+      "Bash(python3 -c \"import json;m=json.load\\(open\\('public/build/manifest.json'\\)\\);print\\(m['resources/css/main.css']['file']\\)\")",
+      "Bash(grep -oE '\\\\.menu img\\\\{[^}]*\\\\}' public/build/__TRACKED_VAR__)",
+      "Bash(python3 -c \"import json;m=json.load\\(open\\('public/build/manifest.json'\\)\\);print\\(m['resources/css/cart.css']['file']\\)\")",
+      "Bash(grep -oE '\\\\.notification\\\\{[^}]*\\\\}' public/build/__TRACKED_VAR__)",
+      "Bash(python3 -c \"import json;m=json.load\\(open\\('public/build/manifest.json'\\)\\);print\\(m['resources/js/cart.js']['file']\\)\")",
+      "Bash(grep -oc 'Առաքումը ներկայումս' public/build/__TRACKED_VAR__)"
+    ]
+  }
+}

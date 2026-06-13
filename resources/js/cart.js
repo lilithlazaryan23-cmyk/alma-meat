@@ -65,31 +65,8 @@ $(document).ready(function () {
     loadCart();
 
     $('#checkout-btn').on('click', function () {
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        if (cart.length === 0) {
-            showNotification('Զամբյուղը դատարկ է');
-            return;
-        }
-
-        $.ajax({
-            url: '/checkout',
-            method: 'POST',
-            headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
-            data: { items: cart },
-            dataType: 'json',
-            success: function (response) {
-                if (response.success) {
-                    showNotification('Պատվերը ուղարկված է!');
-                    localStorage.removeItem('cart');
-                    loadCart();
-                } else {
-                    showNotification(response.message || 'Սխալ');
-                }
-            },
-            error: function () {
-                showNotification('Պատվերի սխալ');
-            }
-        });
+        // Առաքումը դեռ հասանելի չէ — պատվերը հնարավոր չէ ձևակերպել
+        showNotification('Առաքումը ներկայումս հասանելի չէ։ Պատվերը հնարավոր չէ կատարել։');
     });
 });
 

@@ -133,7 +133,8 @@
     height: 85px;
     border-radius: 50%;
     margin-left: 6%;
-    margin-top: 7px;
+    margin-top: 0;
+    display: block;
 }
 
 .texts {
@@ -314,8 +315,9 @@ header ul {
     width: 62%;
     height: 0.5px;
     background-color: aliceblue;
-    margin-left: 20%;
-    margin-top: -1.75%;
+    position: absolute;
+    left: 20%;
+    bottom: 25px;
 }
 
 #mer_masin_open {
