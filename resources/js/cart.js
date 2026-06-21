@@ -4,7 +4,7 @@ function esc(v) {
     });
 }
 
-$(document).ready(function () {
+$(document).ready(function ()   F {
     const menuButton = document.getElementById('mer_masin');
     if (menuButton) {
         menuButton.addEventListener('click', function (e) {
@@ -39,7 +39,7 @@ $(document).ready(function () {
             $('.hr').css('background-color', '#881e1e');
 
             menu_icons.css('color', '#881e1e');
-            $('#logoo').attr('src', '/storage/images/atenk/cow_red.png');
+            $('#logoo').attr('src', '/storage/app/public/images/atenk/cow_red.png');
         }
 
         else {
@@ -48,7 +48,7 @@ $(document).ready(function () {
             links.css({ 'color': 'white', '--underline-color': 'white' })
             $('.hr').css('background-color', 'white');
 
-            $('#logoo').attr('src', '/storage/images/main/Gemini_Generated_Image_czs168czs168czs1.png');
+            $('#logoo').attr('src', '/storage/app/public/images/main/Gemini_Generated_Image_czs168czs168czs1.png');
         }
     })
 

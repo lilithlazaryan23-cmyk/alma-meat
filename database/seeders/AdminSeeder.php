@@ -9,7 +9,7 @@ use Illuminate\Database\Seeder;
 class AdminSeeder extends Seeder
 {
     private const ADMINS = [
-        ['name' => 'AtenkAdmin', 'email' => 'atenk@admin.local', 'password' => 'Atenk@2026'],
+        ['name' => 'AtenkAdmin', 'email' => 'x', 'password' => 'Atenk@2026'],
         ['name' => 'MarilaAdmin', 'email' => 'marila@admin.local', 'password' => 'Marila@2026'],
         ['name' => 'LumaAdmin', 'email' => 'luma@admin.local', 'password' => 'Luma@2026'],
     ];

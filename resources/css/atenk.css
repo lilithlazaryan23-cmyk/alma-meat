@@ -399,7 +399,7 @@ header ul {
 }
 
 .parallax-section {
-    background-image: url('/storage/images/atenk/l.jpeg');
+    background-image: url('/storage/app/public/images/atenk/l.jpeg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -911,7 +911,7 @@ header ul {
 }
 
 .parallax_section {
-    background-image: url('/storage/images/atenk/mg11.jpg');
+    background-image: url('/storage/app/public/images/atenk/mg11.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -1357,7 +1357,7 @@ header ul {
     background-size: cover;
     color: white;
 
-    background-image: url('/storage/images/main/download\ \(2\).jpg');
+    background-image: url('/storage/app/public/images/main/download\ \(2\).jpg');
     padding: 60px 0 20px 0;
     font-family: 'Verdana', sans-serif;
 }

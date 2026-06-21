@@ -195,7 +195,7 @@ $(document).ready(function () {
                 color: '#881e1e',
             });
             $('body').addClass('scrolled');
-            $('#logoo').attr('src', '/storage/images/atenk/cow_red.png');
+            $('#logoo').attr('src', '/storage/app/public/images/atenk/cow_red.png');
 
         } else {
             menu_text.css('color', 'white');
@@ -206,7 +206,7 @@ $(document).ready(function () {
                 color: 'white',
             });
             $('body').removeClass('scrolled');
-            $('#logoo').attr('src', '/storage/images/main/Gemini_Generated_Image_czs168czs168czs1.png');
+            $('#logoo').attr('src', '/storage/app/public/images/main/Gemini_Generated_Image_czs168czs168czs1.png');
         }
     });
 

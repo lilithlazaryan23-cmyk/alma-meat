@@ -42,14 +42,14 @@ $(function () {
             });
             links.css({'--underline-color':'#881e1e', 'color': '#881e1e'});
             menu_icons.css('color', '#881e1e');
-            $('#logoo').attr('src', '/storage/images/atenk/cow_red.png');
+            $('#logoo').attr('src', '/storage/app/public/images/atenk/cow_red.png');
             $('.hr').css('background-color', '#881e1e');
         }
         else {
             menu_text.css('color', 'white');
             links.css({'--underline-color':'white', 'color': 'white'});
             menu_icons.css('color', 'white');
-            $('#logoo').attr('src', '/storage/images/main/Gemini_Generated_Image_czs168czs168czs1.png');
+            $('#logoo').attr('src', '/storage/app/public/images/main/Gemini_Generated_Image_czs168czs168czs1.png');
             $('.hr').css('background-color', 'white');
         }
 
@@ -60,7 +60,7 @@ $(function () {
             });
             links.css({'--underline-color':'#881e1e', 'color': '#881e1e'});
             menu_icons.css('color', '#881e1e');
-            $('#logoo').attr('src', '/storage/images/atenk/cow_red.png');
+            $('#logoo').attr('src', '/storage/app/public/images/atenk/cow_red.png');
             $('.hr').css('background-color', '#881e1e');
         }
 
@@ -71,7 +71,7 @@ $(function () {
             });
             links.css({'--underline-color':'#881e1e', 'color': '#881e1e'});
             menu_icons.css('color', '#881e1e');
-            $('#logoo').attr('src', '/storage/images/atenk/cow_red.png');
+            $('#logoo').attr('src', '/storage/app/public/images/atenk/cow_red.png');
             $('.hr').css('background-color', '#881e1e');
         }
         const container = document.querySelector('.dicrat_img');
