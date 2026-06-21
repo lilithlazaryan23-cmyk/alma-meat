@@ -31,7 +31,7 @@ $(function () {
 
     });
 
-    $(window).on('scroll', function ()  {
+    $(window).on('scroll', function () {
         let q = $(window).scrollTop();
         let links = $('.texts a');
         let menu_text = $('#glxavor, #mer_masin, #tesakani, #baxadratoms, #kap, #buy_now');
@@ -51,7 +51,7 @@ $(function () {
             $('.hr').css('background-color', '#881e1e');
 
             menu_icons.css('color', '#881e1e');
-            $('#logoo').attr('src', '/storage/app/public/images/atenk/cow_red.png');
+            $('#logoo').attr('src', '/storage/images/atenk/cow_red.png');
         }
 
         else {
@@ -60,7 +60,7 @@ $(function () {
             links.css({ 'color': 'white', '--underline-color': 'white' })
             $('.hr').css('background-color', 'white');
 
-            $('#logoo').attr('src', '/storage/app/public/images/main/Gemini_Generated_Image_czs168czs168czs1.png');
+            $('#logoo').attr('src', '/storage/images/main/Gemini_Generated_Image_czs168czs168czs1.png');
         }
 
         if (q > 1220 && q < 3400) {
@@ -71,7 +71,7 @@ $(function () {
             links.css({ 'color': '#881e1e', '--underline-color': '#881e1e' })
 
             menu_icons.css('color', '#881e1e');
-            $('#logoo').attr('src', '/storage/app/public/images/atenk/cow_red.png');
+            $('#logoo').attr('src', '/storage/images/atenk/cow_red.png');
             $('.hr').css('background-color', '#881e1e');
         }
 
@@ -82,7 +82,7 @@ $(function () {
             });
             links.css({ 'color': '#881e1e', '--underline-color': '#881e1e' })
             menu_icons.css('color', '#881e1e');
-            $('#logoo').attr('src', '/storage/app/public/images/atenk/cow_red.png');
+            $('#logoo').attr('src', '/storage/images/atenk/cow_red.png');
             $('.hr').css('background-color', '#881e1e');
         }
     })

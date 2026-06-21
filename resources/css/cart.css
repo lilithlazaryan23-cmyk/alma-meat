@@ -633,7 +633,7 @@ header ul {
     background-size: cover;
     color: white;
 
-        background-image: url('/storage/app/public/images/main/download\ \(2\).jpg');
+    background-image: url('/storage/images/main/download\ \(2\).jpg');
     padding: 60px 0 20px 0;
     font-family: 'Verdana', sans-serif;
 }

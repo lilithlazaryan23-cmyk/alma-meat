@@ -380,7 +380,7 @@ header ul {
 }
 
 .paralex_section {
-    background-image: url('/storage/app/public/images/luma/under_img1.jpg');
+    background-image: url('/storage/images/luma/under_img1.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -736,7 +736,7 @@ header ul {
 }
 
 .paralax_sectionn {
-    background-image: url('/storage/app/public/images/luma/under_img2.jpg');
+    background-image: url('/storage/images/luma/under_img2.jpg');
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -871,7 +871,7 @@ header ul {
 .main-footer {
     background-size: cover;
     color: white;
-    background-image: url('/storage/app/public/images/main/download\ \(2\).jpg');
+    background-image: url('/storage/images/main/download\ \(2\).jpg');
     padding: 60px 0 20px 0;
     margin-top: 29.8%;
     padding: 60px 0 20px 0;

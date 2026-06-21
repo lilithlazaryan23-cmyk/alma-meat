@@ -41,7 +41,7 @@ $(function () {
             });
             links.css({'--underline-color':'black', 'color': 'black'});
             menu_icons.css('color', 'black');
-            $('#logoo').attr('src', '/storage/app/public/images/main/img_color.png');
+            $('#logoo').attr('src', '/storage/images/main/img_color.png');
             $('.hr').css('background-color', 'black');
         }
         else {
@@ -51,7 +51,7 @@ $(function () {
             });
             links.css({'--underline-color':'white', 'color': 'white'});
             menu_icons.css('color', 'white');
-            $('#logoo').attr('src', '/storage/app/public/images/atenk/cow_red.png');
+            $('#logoo').attr('src', '/storage/images/atenk/cow_red.png');
             $('.hr').css('background-color', 'white');
         }
     });

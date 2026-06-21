@@ -92,14 +92,14 @@ $(function () {
 
             menu_icons.css('color', 'black');
             $('.hr').css('background-color', 'black');
-            $('#logoo').attr('src', '/storage/app/public/images/main/img_color.png');
+            $('#logoo').attr('src', '/storage/images/main/img_color.png');
         } else {
             menu_text.css({ 'color': 'white', 'font-weight': 'lighter' })
             links.css({ 'color': 'white', '--underline-color': 'white' })
 
             menu_icons.css('color', 'white');
             $('.hr').css('background-color', 'white');
-            $('#logoo').attr('src', '/storage/app/public/images/main/Gemini_Generated_Image_czs168czs168czs1.png');
+            $('#logoo').attr('src', '/storage/images/main/Gemini_Generated_Image_czs168czs168czs1.png');
         }
     }
 })
